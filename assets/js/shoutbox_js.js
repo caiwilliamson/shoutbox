@@ -50,7 +50,7 @@ function postShout(postData) {
 
 function displayShouts(data) {
     $.each(data["shouts"], function(arrayId, object) {
-        $("<div class='shout'>" + object.id + "<br>" + object.username + ": " + object.shout + "<br>" + "</div>")
+        $("<div class='shout'>" + object.username + ": " + object.shout + "<br>" + "</div>")
             .hide().prependTo(".shoutbox-area").fadeIn("fast");
         trimShouts();
     });

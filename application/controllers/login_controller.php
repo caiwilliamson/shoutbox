@@ -56,7 +56,7 @@ class Login_controller extends CI_Controller {
             $this->session->set_userdata('logged_in', $user_data);
             return true;
         } else {
-            $this->form_validation->set_message('validate_user', 'Invalid User Name or Password');
+            $this->form_validation->set_message('validate_login', 'Invalid User Name or Password');
             return false;
         }
     }
