@@ -1,0 +1,33 @@
+/* Media queries
+===================================================================*/
+
+@media only screen and (max-width: em(699)) {
+
+  body {
+    background-color: $color-white;
+  }
+
+  .page-content {
+    margin-top: 0;
+    box-shadow: none;
+  }
+
+}
+
+@media only screen and (min-width: em(700)) {
+
+  .container { width: col(7); }
+
+}
+
+@media only screen and (min-width: em(900)) {
+
+  .container { width: col(6); }
+
+}
+
+@media only screen and (min-width: em(1200)) {
+
+  .container { width: col(5); }
+
+}

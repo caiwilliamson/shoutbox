@@ -9,7 +9,9 @@ class Login_controller extends CI_Controller {
     }
 
     function index() {
+        $this->load->view('header');
         $this->load->view('login_view');
+        $this->load->view('footer');
     }
 
     function validate_new_account() {
@@ -18,11 +20,15 @@ class Login_controller extends CI_Controller {
         $this->form_validation->set_rules('password', 'Password', 'required|min_length[5]|max_length[16]|alpha_dash');
         if ($this->form_validation->run() == FALSE) {
             $data['new_account_errors'] = validation_errors();
+            $this->load->view('header');
             $this->load->view('login_view', $data);
+            $this->load->view('footer');
         } else {
             $this->create_user();
             $data['message'] = 'Account created. Log in.';
+            $this->load->view('header');
             $this->load->view('login_view', $data);
+            $this->load->view('footer');
         }
     }
 
@@ -40,7 +46,9 @@ class Login_controller extends CI_Controller {
         $this->form_validation->set_rules('password', 'Password', 'required|xss_clean|callback_validate_login');
         if ($this->form_validation->run() == FALSE) {
             $data['login_errors'] = validation_errors();
+            $this->load->view('header');
             $this->load->view('login_view', $data);
+            $this->load->view('footer');
         } else {
             redirect('shoutbox_controller');
         }

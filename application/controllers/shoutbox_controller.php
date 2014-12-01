@@ -10,7 +10,9 @@ class Shoutbox_controller extends CI_Controller {
     function index() {
         $user_data = $this->session->userdata('logged_in');
         if($user_data){
+            $this->load->view('header');
             $this->load->view('shoutbox_view');
+            $this->load->view('footer');
         } else {
             redirect('login_controller');
         }

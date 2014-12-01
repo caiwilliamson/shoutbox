@@ -1,0 +1,57 @@
+// Fonts
+//=================================================================//
+
+$font-size-base: 16;
+$font-weight-base: 300;
+$line-height-base: 1.6;
+
+$font-family-base: 'Inconsolata';
+
+// Colors
+//=================================================================//
+
+$color-beige: #E5D8C5; // #A2E5D3;
+$color-pink: #D21778;
+$color-navy: #19198c;
+
+
+$color-obsidian: #222222;
+$color-grey: #cccccc;
+$color-grey-light: lighten($color-grey, 10%);
+$color-white: #FFFFFF;
+
+// Mixins
+//=================================================================//
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($box-shadow) {
+  -webkit-box-shadow: $box-shadow;
+     -moz-box-shadow: $box-shadow;
+          box-shadow: $box-shadow;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+          transition: $transition;
+}
+
+// Functions
+//=================================================================//
+
+// Convert px to ems relative to a supplied context (default: $font-size-base)
+@function em($target, $context: $font-size-base) {
+  @return ($target/$context) * 1em;
+}
+
+// Imports
+//=================================================================//
+
+@import "grid";
+@import "styles";
+@import "screen";

@@ -1,48 +1,37 @@
-<!DOCTYPE html>
+<div class="row">
+    <div class="col">
 
-<html lang="en">
-    <head>
-        <script type=text/javascript src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/js/bootstrap.js"></script>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">       
-        <title>Shout Box Login</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="background">
+        <h1 class="col-md-12">Shout Box</h1>
 
-                <div class="row">
-                    <h1 class="col-md-12">Shout Box Login</h1>
-                </div>
+        <h2>Log In</h2>
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3>Log In</h3>
-                        <?php
-                            if (isset($login_errors)) { echo $login_errors; }
-                        ?>
-                        <form id="form-login" action="<?php echo base_url(); ?>index.php/login_controller/log_in" method="post" >
-                        <input class="form-control" type="email" name="email" placeholder="Email">
-                        <input class="form-control" type="password" name="password" placeholder="Password">
-                        <input class="btn btn-lg btn-success" type="submit" name="login" value="Log In">
-                        </form>
-                    </div>
-                    <div class="col-md-6">
-                        <h3>Register</h3>
-                        <?php
-                            if (isset($new_account_errors)) { echo $new_account_errors; }
-                            if (isset($message)) { echo $message; }
-                        ?>
-                        <form id="form-create-account" action="<?php echo base_url(); ?>index.php/login_controller/validate_new_account" method="post">
-                        <input class="form-control" type="text" name="username" placeholder="User Name">
-                        <input class="form-control" type="email" name="email" placeholder="Email">
-                        <input class="form-control" type="password" name="password" placeholder="Password">
-                        <input class="btn btn-lg btn-primary" type="submit" name="create-account" value="Create Account">
-                        </form>
-                    </div>
-                </div>
-
-            </div>
+        <div class="validation-errors">
+        <?php
+            if (isset($login_errors)) { echo $login_errors; }
+        ?>
         </div>
-    </body>
-</html>
+
+        <form id="form-login" action="<?php echo base_url(); ?>index.php/login_controller/log_in" method="post" >
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" name="login" value="Log In">
+        </form>
+
+        <h2>Register</h2>
+
+        <div class="validation-errors">
+        <?php
+            if (isset($new_account_errors)) { echo $new_account_errors; }
+            if (isset($message)) { echo $message; }
+        ?>
+        </div>
+
+        <form id="form-create-account" action="<?php echo base_url(); ?>index.php/login_controller/validate_new_account" method="post">
+            <input type="text" name="username" placeholder="User Name">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+            <input class="btn btn-lg btn-primary" type="submit" name="create-account" value="Create Account">
+        </form>
+
+    </div>
+</div>
