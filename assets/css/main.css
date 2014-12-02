@@ -42,11 +42,11 @@
 
 /* line 10, ../scss/_styles.scss */
 body {
-  font-size: 1.125em;
+  font-size: 1em;
   font-family: "Inconsolata";
   font-weight: 300;
   line-height: 1.6;
-  background-color: #e5d8c5;
+  background-color: white;
   color: #222222;
 }
 
@@ -82,26 +82,22 @@ ul, ol {
 
 /* line 42, ../scss/_styles.scss */
 .page-content {
-  margin-top: 3.125em;
-  padding: 1em;
   background-color: white;
-  -webkit-box-shadow: 0.1875em 0.1875em 0.3125em 0 rgba(50, 50, 50, 0.5);
-  -moz-box-shadow: 0.1875em 0.1875em 0.3125em 0 rgba(50, 50, 50, 0.5);
-  box-shadow: 0.1875em 0.1875em 0.3125em 0 rgba(50, 50, 50, 0.5);
+  padding: 0.5em;
 }
 
-/* line 49, ../scss/_styles.scss */
+/* line 47, ../scss/_styles.scss */
 footer {
   margin: 1em;
   text-align: center;
   color: #cccccc;
 }
 
-/* line 55, ../scss/_styles.scss */
+/* line 53, ../scss/_styles.scss */
 form {
   margin-bottom: 1em;
 }
-/* line 57, ../scss/_styles.scss */
+/* line 55, ../scss/_styles.scss */
 form input, form textarea {
   font-family: "Inconsolata";
   font-size: 1em;
@@ -110,101 +106,112 @@ form input, form textarea {
   padding: 0.5em;
   margin: 0.5em 0;
 }
-/* line 64, ../scss/_styles.scss */
+/* line 62, ../scss/_styles.scss */
 form input:focus, form textarea:focus {
   outline: none;
 }
-/* line 68, ../scss/_styles.scss */
+/* line 66, ../scss/_styles.scss */
 form textarea {
   font-family: "Inconsolata";
-  border: 1px solid #cccccc;
   resize: none;
-  height: 8em;
+  height: 4em;
   vertical-align: top;
 }
-/* line 75, ../scss/_styles.scss */
+/* line 72, ../scss/_styles.scss */
 form input[type=submit] {
   background-color: #e6e6e6;
   border: 2px solid #cccccc;
   transition: all 0.3s ease;
 }
-/* line 79, ../scss/_styles.scss */
+/* line 76, ../scss/_styles.scss */
 form input[type=submit]:hover {
   color: #d21778;
   cursor: pointer;
 }
 
-/* line 86, ../scss/_styles.scss */
+/* line 83, ../scss/_styles.scss */
 h1 {
+  margin-bottom: 0.5em;
   text-align: center;
-  margin-bottom: 1em;
 }
 
-/* line 91, ../scss/_styles.scss */
+/* line 88, ../scss/_styles.scss */
+h2 {
+  margin: 0.5em 0;
+}
+
+/* line 92, ../scss/_styles.scss */
 .logout {
   float: right;
   text-align: right;
 }
 
-/* line 96, ../scss/_styles.scss */
+/* line 97, ../scss/_styles.scss */
 .logout, .welcome {
   display: inline;
 }
 
-/* line 100, ../scss/_styles.scss */
+/* line 101, ../scss/_styles.scss */
 .info {
   margin-bottom: 1em;
 }
 
-/* line 104, ../scss/_styles.scss */
+/* line 105, ../scss/_styles.scss */
 .shoutbox-area {
   border: 1px solid #cccccc;
   padding: 1em;
-  height: 18.75em;
+  height: 9.375em;
   overflow-y: scroll;
   word-wrap: break-word;
 }
 
-/* line 112, ../scss/_styles.scss */
-.validation-errors {
-  margin: 1em 0;
-  text-align: center;
-}
-
-/* line 117, ../scss/_styles.scss */
-.shout {
-  padding: 0.5em 0;
-  border-bottom: 1px dashed #cccccc;
-}
-
 /* Media queries
 ===================================================================*/
-@media only screen and (max-width: 43.6875em) {
-  /* line 6, ../scss/_screen.scss */
-  body {
-    background-color: white;
-  }
-
-  /* line 10, ../scss/_screen.scss */
-  .page-content {
-    margin-top: 0;
-    box-shadow: none;
-  }
-}
 @media only screen and (min-width: 43.75em) {
-  /* line 19, ../scss/_screen.scss */
+  /* line 10, ../scss/_screen.scss */
   .container {
     width: 58.33333%;
   }
+
+  /* line 12, ../scss/_screen.scss */
+  body {
+    font-size: 1.125em;
+    background-color: #e5d8c5;
+  }
+
+  /* line 17, ../scss/_screen.scss */
+  .page-content {
+    margin-top: 3.125em;
+    padding: 1em;
+    -webkit-box-shadow: 0.1875em 0.1875em 0.3125em 0 rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 0.1875em 0.1875em 0.3125em 0 rgba(50, 50, 50, 0.5);
+    box-shadow: 0.1875em 0.1875em 0.3125em 0 rgba(50, 50, 50, 0.5);
+  }
+
+  /* line 23, ../scss/_screen.scss */
+  .shoutbox-area {
+    height: 18.75em;
+  }
+
+  /* line 27, ../scss/_screen.scss */
+  .shout {
+    padding: 0.5em 0;
+    border-bottom: 1px dashed #cccccc;
+  }
+
+  /* line 32, ../scss/_screen.scss */
+  textarea {
+    height: 8em;
+  }
 }
 @media only screen and (min-width: 56.25em) {
-  /* line 25, ../scss/_screen.scss */
+  /* line 40, ../scss/_screen.scss */
   .container {
     width: 50%;
   }
 }
 @media only screen and (min-width: 75em) {
-  /* line 31, ../scss/_screen.scss */
+  /* line 46, ../scss/_screen.scss */
   .container {
     width: 41.66667%;
   }

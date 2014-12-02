@@ -3,20 +3,35 @@
 
 @media only screen and (max-width: em(699)) {
 
-  body {
-    background-color: $color-white;
-  }
-
-  .page-content {
-    margin-top: 0;
-    box-shadow: none;
-  }
-
 }
 
 @media only screen and (min-width: em(700)) {
 
   .container { width: col(7); }
+
+  body {
+    font-size: em(18);
+    background-color: $color-beige;
+  }
+
+  .page-content {
+    margin-top: em(50);
+    padding: em(16);
+    @include box-shadow(em(3) em(3) em(5) 0 rgba(50, 50, 50, 0.5));
+  }
+
+  .shoutbox-area {
+    height: em(300);
+  }
+
+  .shout {
+    padding: em(8) 0;
+    border-bottom: 1px dashed $color-grey;
+  }
+
+  textarea {
+    height: em(128);
+  }
 
 }
 
